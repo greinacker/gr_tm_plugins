@@ -5,6 +5,7 @@ import os
 # Import endpoint modules
 from healthcheck import create_blueprint as create_healthcheck_blueprint
 from youtube_transcript import create_blueprint as create_youtube_transcript_blueprint
+from stockchart import create_blueprint as create_stockchart_blueprint
 
 def create_app():
     """
@@ -25,6 +26,7 @@ def create_app():
     # Register blueprints for each endpoint
     app.register_blueprint(create_healthcheck_blueprint(mount_path))
     app.register_blueprint(create_youtube_transcript_blueprint(mount_path))
+    app.register_blueprint(create_stockchart_blueprint(mount_path))
     
     return app
 
