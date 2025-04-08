@@ -18,6 +18,3 @@ app.register_blueprint(create_healthcheck_blueprint(''))
 app.register_blueprint(create_youtube_transcript_blueprint(''))
 app.register_blueprint(create_stockchart_blueprint(''))
 
-# Vercel handler
-def handler(request):
-    return app(request)
